@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="Stylesheet" href="index.css">
+  <title>Nyatichi</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body style="background-color: #000;">
+  <div id="navbar">
+    <a href="#Projects">Projects</a>
+    <a href="#About">About</a>
+    <a href="#Home">Home</a>
+  </div>
+  <script>
+    window.onscroll = function () { scrollFunction() };
+    function scrollFunction() {
+      if (document.body.scrollTop > 550 || document.documentElement.scrollTop > 550) {
+        document.getElementById("navbar").style.top = "0";
+      }
+      else {
+        document.getElementById("navbar").style.top = "-50px";
+      }
+    }
+  </script>
+  <div class="Home">
+    <div class="banner-text">
+      <img src="Sparkles__copy_-removebg-preview.png" alt="Me" style="float: right; opacity:60%;margin-right: 3px;">
+      <h1 style="font-size: 50px;color: #fff;margin-top: 200px;">Irene Nyatichi</h1>
+      <p><a href="#About.html"><i class="arrow down"></i></a></p>
+    </div>
+    <div class="container" style="margin-right: 400px;">
+      <p><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+      <script>
+        const typedTextSpan = document.querySelector(".typed-text");
+        const cursorSpan = document.querySelector(".cursor");
+        const textArray = ["Android Developer", "Backend Developer", "UI/UX Designer"];
+        const typingDelay = 200;
+        const erasingDelay = 100;
+        const newTextDelay = 2000;
+        let textArrayIndex = 0;
+        let charIndex = 0;
+        function type() {
+          if (charIndex < textArray[textArrayIndex].length) {
+            if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+            typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, typingDelay);
+          }
+          else {
+            cursorSpan.classList.remove("typing");
+            setTimeout(erase, newTextDelay);
+          }
+        }
+        function erase() {
+          if (charIndex > 0) {
+            if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+            typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, erasingDelay);
+          }
+          else {
+            cursorSpan.classList.remove("typing");
+            textArrayIndex++;
+            if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+            setTimeout(type, typingDelay + 1100);
+          }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () { // On DOM Load initiate the effect
+          if (textArray.length) setTimeout(type, newTextDelay + 250);
+        });
+      </script>
+    </div>
+  </div>
+  <section class="About">
+    <div id="About">
+      <div class="wrapper" style="margin-left: 10px;">
+        <ul>
+          <li class="linkedin">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <div class="slider"><a href="https://www.linkedin.com/in/irene-nyatichi/">
+                <p>LinkedIn</p>
+              </a></div>
+          </li>
+          <li class="google">
+            <i class="fa fa-google" aria-hidden="true"></i>
+            <div class="slider"><a href="mailto:irenenyatichi@gmail.com">
+                <p>Gmail</p>
+              </a></div>
+          </li>
+          <li class="twitter">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <div class="slider"><a href="https://twitter.com/Me_Tichi">
+                <p>Twitter</p>
+              </a></div>
+          </li>
+          <li class="github">
+            <i class="fa fa-github" aria-hidden="true"></i>
+            <div class="slider"><a href="https://github.com/irenenyatichi">
+                <p>Github</p>
+              </a></div>
+          </li>
+          <li class="behance">
+            <i class="fa fa-behance" aria-hidden="true"></i>
+            <div class="slider"><a href="https://www.behance.net/irene_nyatichi">
+                <p>Behance</p>
+              </a></div>
+          </li>
+          <li class="dribbble">
+            <i class="fa fa-dribbble" aria-hidden="true"></i>
+            <div class="slider"><a href="https://dribbble.com/Nyatich_i">
+            
+              <p>Dribbble</p>
+              </a></div>
+          </li>
+        </ul>
+      </div>
+      <h1 style="color: #dd7732;margin-left: 45%;margin-top: 80px;">About Me</h1>
+      <div class="row" style="margin-left: 150px; margin-right: 30px;color: black;">
+        <div class="column" onclick="openTab('b1');" style="background:#DD7732;color: #fff;">Kotlin<br>(Mobile Development Language)</div>
+        <div class="column" onclick="openTab('b2');" style="background:#DDCD32;color: #fff;">Python<br>(Backend Development Language)</div>
+        <div class="column" onclick="openTab('b3');" style="background:#DD3243;color: #fff;">UX/UI<br>(Research, Design, Development)</div>
+      </div>
+      
+      <!-- The expanding grid (hidden by default) -->
+      <div id="b1" class="containerTab" style="display:none;background:#DD7732;margin-left: 150px;margin-right: 30px">
+        <!-- If you want the ability to close the container, add a close button -->
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <h2>Kotlin</h2>
+        <p>
+          <p>
+            <Li>
+              <ol>
+                <li>
+                  
+                </li>
+              </ol>
+            </Li>
+          </p>
+  
+        </p>
+      </div>
+      
+      <div id="b2" class="containerTab" style="display:none;background:#DDCD32;margin-left: 150px;margin-right: 30px">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <h2>Python</h2>
+        <h4>(Backend Web Development Language)</h4>
+        <p>
+          <Li>
+            <ol>
+              <li>
+
+              </li>
+            </ol>
+          </Li>
+        </p>
+      </div>
+      
+      <div id="b3" class="containerTab" style="display:none;background:#DD3243;margin-left: 150px;margin-right: 30px">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <h2>UX/UI</h2>
+        <h4>(Research, Design, Development)</h4>
+        <p>
+          <li>Desk Research</li>
+          <li>Primary Research</li>
+          <li>Conducting Interviews</li>
+          <li>Secondary Research</li>
+          <li>Analysis and Synthesis</li>
+          <li></li>
+        </p>
+        <style>
+          /* The grid: Three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+  height: 200px;
+}
+
+.containerTab {
+  padding: 20px;
+  color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+        </style>
+        <script>
+          function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+  </script>
+      </div>
+      <!-- <p class="text"
+        style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: x-large; color: #CDCBD6;margin-left: 150px;">
+        Irene Nyatichi is a Software Developer.
+        <br>Currently a student at AkiraChix studying
+        Computer Programming Languages;JavaScript, Python, Kotlin. <br>I would like to create interactive websites
+        and applications for people, while ensuring wonderful experiences.
+      </p> -->
+      <br>
+      <br>
+      <br>    
+  </section>
+  <section class="Projects" style="background-color: black;margin-top: 200px">
+    <table>
+      <tr>
+        <td>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="Vanilla Ice Cream.jpeg" alt="Avatar" style="width:400px;height:600px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>Ice Cream Cottage</h1>
+                <br>
+                <p>An e-commerce website that allows customers to view and purchase the ice cream flavors they would
+                  like.</p>
+                <br>
+                <br>
+                <div class="w3-container">
+                  <h2>Languages</h2>
+                  <h3>HTML</h3>
+                  <div>
+                    <div class="w3-light-grey w3-round-xlarge ">
+                      <div class="w3-container w3-blue w3-round-xlarge" style="width:52.7%">52.7%</div>
+                    </div>
+                  </div>
+                  <h3>CSS</h3>
+                  <div class="w3-light-grey w3-round-xlarge">
+                    <div class="w3-container w3-blue w3-round-xlarge" style="width:33.6%">33.6%</div>
+                  </div>
+                </div>
+                <h3>PHP</h3>
+                <div class="w3-light-grey w3-round-xlarge">
+                  <div class="w3-container w3-blue w3-round-xlarge" style="width:13.7%">13.7%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="Food.jpg" alt="Avatar" style="width:400px;height:600px;margin-bottom: 120px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>Foodie</h1>
+                <br>
+                <p>A mobile application based on Kotlin. It is a restaurant review and photo-sharing application.</p>
+                <br>
+                <br>
+                <div class="w3-container">
+                  <h2>Languages</h2>
+                  <h3>Kotlin</h3>
+                  <div>
+                    <div class="w3-light-grey w3-round-xlarge">
+                      <div class="w3-container w3-blue w3-round-xlarge" style="width:100%">100%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="School.jpg" alt="Avatar" style="width:400px;height:600px;margin-bottom: 120px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>School Registration System</h1>
+                <br>
+                <p>Built a school management system using Django, HTML/ CSS. That enables users to upload and store data
+                  in the database.</p>
+                <br>
+                <br>
+                <div class="w3-container">
+                  <h2>Languages</h2>
+                  <h3>HTML</h3>
+                  <div>
+                    <div class="w3-light-grey w3-round-xlarge">
+                      <div class="w3-container w3-blue w3-round-xlarge" style="width:55.3%">55.3%</div>
+                    </div>
+                  </div>
+                  <h3>Python</h3>
+                  <div>
+                    <div class="w3-light-grey w3-round-xlarge">
+                      <div class="w3-container w3-blue w3-round-xlarge" style="width:44.7%">44.7%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="Phonebook.jpg" alt="Avatar" style="width:400px;height:600px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>Contact Book</h1>
+                <br>
+                <p>A Kotlin based project that applies the use of recycler view and cards to display contact information
+                  of various people.</p>
+                <br>
+                <br>
+                <div class="w3-container">
+                  <h2>Languages</h2>
+                  <h3>HTML</h3>
+                  <div>
+                    <div class="w3-light-grey w3-round-xlarge">
+                      <div class="w3-container w3-blue w3-round-xlarge" style="width:52.7%">52.7%</div>
+                    </div>
+                  </div>
+                  <h3>CSS</h3>
+                  <div>
+                    <div class="w3-light-grey w3-round-xlarge">
+                      <div class="w3-container w3-blue w3-round-xlarge" style="width:33.6%">33.6%</div>
+                    </div>
+                  </div>
+                  <h3>PHP</h3>
+                  <div>
+                    <div class="w3-light-grey w3-round-xlarge">
+                      <div class="w3-container w3-blue w3-round-xlarge" style="width:13.7%">13.7%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="cow.jpeg" alt="Avatar" style="width:400px;height:600px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>Solio Farm</h1>
+                <br>
+                <p>A UX Design project based on a farm that sells various dairy products.</p>
+                <br>
+                <br>
+                <div class="w3-container">
+                  <h2>Languages</h2>
+                  <h3>Figma</h3>
+                  <div>
+                    <div class="w3-light-grey w3-round-xlarge">
+                      <div class="w3-container w3-blue w3-round-xlarge" style="width:98%">98%</div>
+                    </div>
+                  </div>
+                  <h3>Adobe Illustrator</h3>
+                  <div>
+                    <div class="w3-light-grey w3-round-xlarge">
+                      <div class="w3-container w3-blue w3-round-xlarge" style="width:2%">2%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </td>
+        <td>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="pictureBook.jpg" alt="Avatar" style="width:400px;height:600px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>School Registration System</h1>
+                <p>A Kotlin based mobile application that allows students to register to the portal and be able to
+                  choose the courses rrelevant for their studies. </p>
+                <br>
+                <br>
+                <div class="w3-container">
+                  <h2>Languages</h2>
+                  <h3>Kotlin</h3>
+                  <div>
+                    <div class="w3-light-grey w3-round-xlarge">
+                      <div class="w3-container w3-blue w3-round-xlarge" style="width:99.4%">99.4%</div>
+                    </div>
+                  </div>
+                  <h3>Java</h3>
+                  <div>
+                    <div class="w3-light-grey w3-round-xlarge">
+                      <div class="w3-container w3-blue w3-round-xlarge" style="width:0.6%">0.6%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </td>
+      </tr>
+    </table>
+    <style>
+      .flip-card {
+        background-color: transparent;
+        width: 400px;
+        height: 600px;
+        /* border: 5px solid #f1f1f1; */
+        perspective: 1000px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 40px;
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        /* margin: 50px; */
+      }
+
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      .flip-card-back {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateY(180deg);
+      }
+    </style>
+  </section>
+</body>
+
+</html>
