@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="Stylesheet" href="index.css">
-  <title>Nyatichi</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,6 +14,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Nyatichi</title>
 </head>
 
 <body style="background-color: #000;">
@@ -39,7 +38,9 @@
     <div class="banner-text">
       <img src="Sparkles__copy_-removebg-preview.png" alt="Me" style="float: right; opacity:60%;margin-right: 3px;">
       <h1 style="font-size: 50px;color: #fff;margin-top: 200px;">Irene Nyatichi</h1>
-      <p><a href="#About.html"><i class="arrow down"></i></a></p>
+      <p>
+        <a href="#About.html"><i class="arrow down"></i></a>
+      </p>
     </div>
     <div class="container" style="margin-right: 400px;">
       <p><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
@@ -85,7 +86,7 @@
       </script>
     </div>
   </div>
-  <section class="About">
+  <section class="About" style="background-color: #fff;height: 545px;">
     <div id="About">
       <div class="wrapper" style="margin-left: 10px;">
         <ul>
@@ -128,7 +129,7 @@
           </li>
         </ul>
       </div>
-      <h1 style="color: #dd7732;margin-left: 45%;margin-top: 80px;">About Me</h1>
+      <h1 style="color: #dd7732;margin-left: 45%;">About Me</h1>
       <div class="row" style="margin-left: 150px; margin-right: 30px;color: black;">
         <div class="column" onclick="openTab('b1');" style="background:#DD7732;color: #fff;">Kotlin<br>(Mobile Development Language)</div>
         <div class="column" onclick="openTab('b2');" style="background:#DDCD32;color: #fff;">Python<br>(Backend Development Language)</div>
@@ -153,7 +154,6 @@
   
         </p>
       </div>
-      
       <div id="b2" class="containerTab" style="display:none;background:#DDCD32;margin-left: 150px;margin-right: 30px">
         <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
         <h2>Python</h2>
@@ -236,7 +236,8 @@
       <br>
       <br>    
   </section>
-  <section class="Projects" style="background-color: black;margin-top: 200px">
+  <section class="Projects" style="background-color: black;margin-top: 20px">
+    <h1 style="color: #dd7732;margin-left: 45%;">Projects</h1>
     <table>
       <tr>
         <td>
@@ -479,5 +480,19 @@
     </style>
   </section>
 </body>
-
+<footer>
+  <div class="footer"><p>Nyatichi Copyright @ 2021</p></div>
+  <style>
+    .footer {
+       position: fixed;
+       left: 0;
+       bottom: 0;
+       width: 100%;
+       /* height: 50px; */
+       /* background-color: red; */
+       color: white;
+       text-align: center;
+    }
+    </style>
+</footer>
 </html>
